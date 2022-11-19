@@ -8,5 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.log(err));
+
+// eslint-disable-next-line @typescript-eslint/dot-notation
+window['CESIUM_BASE_URL'] = '/assets/cesium/';
